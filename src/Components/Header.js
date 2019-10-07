@@ -22,20 +22,20 @@ class Header extends Component {
 	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" className="nav">
-            <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-            <li><a className="smoothscroll" href="#about">About</a></li>
-	         <li><a className="smoothscroll" href="#resume">Resume</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-            <li><a className="smoothscroll" href="#contact">Contact</a></li>
+            <li className="current"><a className="smoothscroll" href="#home">首页</a></li>
+            <li><a className="smoothscroll" href="#about">关于我</a></li>
+	         <li><a className="smoothscroll" href="#resume">工作简历</a></li>
+            <li><a className="smoothscroll" href="#portfolio">作品展示</a></li>
+            <li><a className="smoothscroll" href="#testimonials">推荐信</a></li>
+            <li><a className="smoothscroll" href="#contact">联系方式</a></li>
          </ul>
 
       </nav>
 
       <div className="row banner">
          <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
-            <h3>I'm a {city} based <span>{occupation}</span>. {description}.</h3>
+            <h1 className="responsive-headline">您好！我是{name}</h1>
+            <h3>我是一名 <span>{occupation}</span>。{description}。</h3>
             <hr />
             <ul className="social">
                {networks}

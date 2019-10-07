@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
 import $ from 'jquery';
 import './App.css';
 import Header from './Components/Header';
@@ -9,6 +8,7 @@ import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
+import Modal from './Components/Modal';
 
 class App extends Component {
 
@@ -16,11 +16,11 @@ class App extends Component {
     super(props);
     this.state = {
       foo: 'bar',
-      resumeData: {}
+      resumeData: {},
+      modalShow: false,
+      modalContent: null,
+      modalContentMaxWidth: null,
     };
-
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
 
   }
 
@@ -43,16 +43,25 @@ class App extends Component {
     this.getResumeData();
   }
 
+  showModal =  (modalContent, modalContentMaxWidth) => {
+    this.setState({ modalShow: true, modalContent, modalContentMaxWidth })
+  }
+
   render() {
     return (
       <div className="App">
         <Header data={this.state.resumeData.main}/>
         <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume}/>
-        <Portfolio data={this.state.resumeData.portfolio}/>
+        <Resume data={this.state.resumeData.resume} showModal={this.showModal} />
+        <Portfolio data={this.state.resumeData.portfolio} showModal={this.showModal} />
         <Testimonials data={this.state.resumeData.testimonials}/>
         <Contact data={this.state.resumeData.main}/>
         <Footer data={this.state.resumeData.main}/>
+        {this.state.modalShow &&
+          <Modal onClose={() => this.setState({ modalShow: false })} maxWidth={this.state.modalContentMaxWidth} >
+            {this.state.modalContent}
+          </Modal>
+        }
       </div>
     );
   }

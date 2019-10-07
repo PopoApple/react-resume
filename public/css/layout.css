@@ -65,7 +65,7 @@ header .banner-text h1 {
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
-   font: 18px/1.9em 'librebaskerville-regular', serif;
+   font: 18px/1.9em 'serif', serif;
    color: #A8A8A8;
    margin: 0 auto;
    width: 70%;
@@ -165,11 +165,12 @@ ul#nav li a {
 /* 8px padding top + 8px padding bottom + 32px line-height = 48px */
 
    display: inline-block;
-   padding: 8px 13px;
+   padding: 8px 20px;
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
    color: #fff;
+   font-size: 14px;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -261,13 +262,13 @@ ul#nav li.current a { color: #F06000; }
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 
-.education, .work {
+.education, .qualifications, .work {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
 #resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/24px 'serif', serif;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
@@ -275,6 +276,9 @@ ul#nav li.current a { color: #F06000; }
 #resume .info span {
    margin-right: 5px;
    margin-left: 5px;
+}
+#resume .info-last {
+   margin-bottom: 30px;
 }
 #resume .date {
    font: 15px/24px 'opensans-regular', sans-serif;
@@ -665,7 +669,11 @@ call-to-action .button {
    letter-spacing: 3px;
    color: #fff;
 }
-#testimonials h1 span { display: none; }
+#testimonials h1 span { 
+   display: none; 
+   border-bottom: 3px solid #e6e6e6;
+   padding: 10px 0;
+}
 #testimonials .header-col { padding-top: 9px; }
 #testimonials .header-col h1:before {
    font-family: 'FontAwesome';
@@ -800,6 +808,13 @@ call-to-action .button {
    color: #636363;
 }
 #contact .section-head { margin-bottom: 42px; }
+#contact .section-head h1 {
+   font: 16px/24px 'opensans-bold', sans-serif;            
+   text-align: center;   
+   margin-bottom: 40px;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+}  
+#contact .header-col { padding-top: 0; }
 
 #contact a, #contact a:visited  { color: #11ABB0; }
 #contact a:hover, #contact a:focus { color: #fff; }
@@ -811,16 +826,10 @@ call-to-action .button {
    color: #EBEEEE;
    margin-bottom: 6px;
 }
-#contact h1 span { display: none; }
-#contact h1:before {
-   font-family: 'FontAwesome';
-   content: "\f0e0";
-	padding-right: 10px;
-	font-size: 72px;
-   line-height: 72px;
-   text-align: left;
-   float: left;
-   color: #ebeeee;
+
+#contact .section-head h1 span {
+   border-bottom: 3px solid #e6e6e6;
+   padding: 10px 0;
 }
 
 #contact h4 {
@@ -834,6 +843,23 @@ call-to-action .button {
 }
 #contact .header-col { padding-top: 6px; }
 
+#contact .icon-text {
+   color: #EBEEEE;
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+#contact .contact-icon {
+   margin-bottom: 5px;
+}
+
+#contact .contact-icon .iconfont {
+   font-size: 40px;
+}
+
+#contact .contact-text {
+   font-size: 18px;
+}
 
 /* contact form */
 #contact form { margin-bottom: 30px; }

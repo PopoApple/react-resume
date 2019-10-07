@@ -29,6 +29,7 @@ e. Others
 @import url("fonts.css");
 @import url("fontello/css/fontello.css");
 @import url("font-awesome/css/font-awesome.min.css");
+@import url("font-ali/iconfont.css");
 
 /* ------------------------------------------------------------------
 /* b. Reset
@@ -289,6 +290,7 @@ a, a:visited {
    text-decoration: none;
    outline: 0;
    color: #11ABB0;
+   cursor: pointer;
 
    -webkit-transition: color .3s ease-in-out;
    -moz-transition: color .3s ease-in-out;
@@ -467,7 +469,7 @@ input[type="button"] {
    background: #11ABB0;
    display: inline-block;
 	text-decoration: none;
-   letter-spacing: 0;
+   letter-spacing: 2px;
    color: #fff;
 	padding: 12px 20px;
 	margin-bottom: 18px;
