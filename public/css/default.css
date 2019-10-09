@@ -804,6 +804,19 @@ properly.
 	text-align: center !important;
 }
 
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+html, body {
+   height: 100%;
+   overflow: auto;
+   -webkit-overflow-scrolling: touch;
+}
+body {
+   position: relative;
+}
 
 
 
