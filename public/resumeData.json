@@ -20,7 +20,7 @@
     "social":[
       {
         "name":"github",
-        "url":"http://github.com/tbakerx",
+        "url":"https://github.com/PopoApple",
         "className":"fa fa-github"
       }
     ]
@@ -135,7 +135,7 @@
         "image":"portfolio1.jpg",
         "url":"https://www.canadianwanderlust.com",
         "items": [
-          { "img": "portfolio/designer.jpg", "desc": "这是一款拖拽式的手机APP设计器，功能包括页面管理、页面设计、内容编辑、预览、生成应用等。"  }
+          { "img": "portfolio/designer.jpg", "desc": "这是一款拖拽式的手机APP设计器，包含页面管理、页面设计、内容编辑、预览等功能。"  }
         ]
       },
       {
