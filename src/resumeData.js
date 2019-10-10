@@ -40,7 +40,6 @@ export default {
     ]
   },
   "resume":{
-    "skillmessage":"HTML、CSS、JavaScript、React、JQuery、Java",
     "education":[
       {
         "school":"广东财经大学",
@@ -114,6 +113,7 @@ export default {
         ]
       }
     ],
+    "skillmessage":"HTML、CSS、JavaScript、React、JQuery、Webpack、Git、Vue、Java",
     "skills":[
       {
         "name":"HTML",
@@ -129,11 +129,23 @@ export default {
       },
       {
         "name":"React",
-        "level":"70%"
+        "level":"80%"
       },
       {
         "name":"JQuery",
         "level":"70%"
+      },
+      {
+        "name":"Webpack",
+        "level":"55%"
+      },
+      {
+        "name":"Git",
+        "level":"45%"
+      },
+      {
+        "name":"Vue",
+        "level":"40%"
       },
       {
         "name":"Java",
@@ -143,6 +155,15 @@ export default {
   },
   "portfolio":{
     "projects": [
+      {
+        "title":"UI组件库",
+        "category":"一套后台管理信息系统UI组件库",
+        "image":portfolio3Img,
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io",
+        "items": [
+          { "img": componentsImg, "desc": "一套后台管理信息系统UI组件库，提供常用的展示、输入、弹框等类型的组件，包含组件用法举例和API说明。"  }
+        ]
+      },
       {
         "title":"APP设计器",
         "category":"一款拖拽式的手机APP设计器",
@@ -163,15 +184,6 @@ export default {
           { "title": "酷秀", "img": coolshowImg, "desc": "一款Metro风格的手机官网模板，具有酷炫的页面切换效果、不规则瀑布流式的图文列表页和带有评论功能的文章内容页。"},
           { "title": "白云乐园", "img": cloudparkImg, "desc": "一款个性化的娱乐休闲类微站模板，具有轻松自然的动画效果、创意的下拉菜单、简约时尚的图文列表页和带有打赏功能的文章内容页。"},
           { "title": "城市在线", "img": cityImg, "desc": "一款大方实用的综合类微站模板，具有主流的手机应用风格，如轮播图、图标式导航、指甲盖式的图文列表和缩放式的侧滑菜单。"}
-        ]
-      },
-      {
-        "title":"UI组件库",
-        "category":"一套后台管理信息系统UI组件库",
-        "image":portfolio3Img,
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io",
-        "items": [
-          { "img": componentsImg, "desc": "一套后台管理信息系统UI组件库，提供常用的展示、输入、弹框等类型的组件，包含组件用法举例和API说明。"  }
         ]
       }
     ]

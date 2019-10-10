@@ -818,5 +818,15 @@ body {
    position: relative;
 }
 
+.animiUpDown {
+   animation: animiUpDown 2s ease-in-out infinite;
+}
+
+@keyframes animiUpDown
+{
+    0%   {transform: translateY(-10px);}
+    50%  {transform: translateY(10px);}
+    100%  {transform: translateY(-10px);}
+}
 
 

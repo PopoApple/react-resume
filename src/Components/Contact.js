@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import weixinImg from 'ASSET/images/code2.png'
 
 class Contact extends Component {
   render() {
@@ -40,6 +41,12 @@ class Contact extends Component {
             <div className="four columns icon-text">
                <div className="contact-icon"><span class="icon iconfont" style={{ fontSize: 45 }}>&#xe69d;</span></div>
                <div className="contact-text">{email}</div>
+            </div>
+         </div>
+         <div className="row" style={{ textAlign: 'center', marginTop: 20, marginBottom: 50}}>
+            <div className="twelve columns">
+               {/* <div className="contact-text" style={{ color: '#fff', fontSize: 16, marginBottom: 10, letterSpacing: 2 }}>微信</div> */}
+               <img class="code2-img" src={weixinImg} />
             </div>
          </div>
       </section>

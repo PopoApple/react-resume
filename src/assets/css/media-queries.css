@@ -224,7 +224,7 @@
    header .social li { margin: 0 10px; }
 
     /* scrolldown link */
-   header .scrolldown { display: none; }
+   /* header .scrolldown { display: none; } */
 
 
    /* About Section
@@ -347,6 +347,10 @@
       line-height: 54px;
    }
 
+   #contact .code2-img {
+      width: 150px;
+      height: 150px;
+   }
 
 }
 
