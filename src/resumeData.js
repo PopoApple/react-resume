@@ -10,16 +10,14 @@ import cloudparkImg from 'ASSET/images/portfolio/cloudpark.jpg'
 import cityImg from 'ASSET/images/portfolio/city.jpg'
 import portfolio3Img from 'ASSET/images/portfolio3.png'
 import componentsImg from 'ASSET/images/portfolio/components.jpg'
-
-
-console.log(111, portfolio1Img)
+import profilepicImg from 'ASSET/images/profilepic.png'
 
 export default {
   "main": {
     "name":"华永妍",
     "occupation":"Web前端工程师",
     "description":"踏实靠谱，热爱工作，注重开发流程的规范性，注重代码可维护性和可重用性，能很好地与同事沟通配合，高效地完成工作",
-    "image":"profilepic.png",
+    "image":profilepicImg,
     "bio":"毕业于广东财经大学，信息管理与信息系统专业；十年以上工作经验，熟悉主流的前端技术和工具，最擅长的框架是React、JQuery，有Java开发和动画设计的经验；生活中积极向上，健康自律，兴趣爱好有户外活动、打球、逛街、厨艺。",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
     "email": "156342638@qq.com",
