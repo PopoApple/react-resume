@@ -25,11 +25,32 @@
 	    var target = this.hash,
 	    $target = $(target);
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
+	   //  $('html, body').stop().animate({
+	   //      'scrollTop': $target.offset().top
+	   //  }, 800, 'swing', function () {
+	   //      window.location.hash = target;
+      //  });
+      var start = null;
+      const startTop = $('body').scrollTop()
+      const endTop = $target[0].offsetTop
+      const s = endTop - startTop
+      totalTime = 800
+
+      function step(timestamp) {
+         if (!start) start = timestamp;
+         var progress = timestamp - start;
+         const next = startTop + progress * s / 800
+         document.body.scrollTop = s < 0 ? Math.max(next, endTop) : Math.min(next, endTop);
+         if (document.body.scrollTop === endTop) {
+            window.location.hash = target;
+         } else {
+            window.requestAnimationFrame(step);
+         }
+         $('#log').html($('#log').html() + '<br />' + document.body.scrollTop)
+      }
+
+      window.requestAnimationFrame(step);
+
 	});
 
 
