@@ -4,6 +4,7 @@ import Detail from './Detail';
 class Portfolio extends Component {
 
   showDetail = (projects) => {
+    console.log(111)
     this.props.showModal(<Detail title={projects.title} subTitle={projects.category} list={projects.items}></Detail>, projects.detailMaxWidth)
   }
 
@@ -11,10 +12,10 @@ class Portfolio extends Component {
 
     if(this.props.data){
       var projects = this.props.data.projects.map((projects) => {
-        var projectImage = 'images/portfolio/'+projects.image;
+        var projectImage = projects.image;
         return <div key={projects.title} className="columns portfolio-item">
            <div className="item-wrap">
-            <a onClick={() => this.showDetail(projects)} title={projects.title}>
+            <span onClick={() => this.showDetail(projects)} title={projects.title}>
                <img alt={projects.title} src={projectImage} />
                <div className="overlay">
                   <div className="portfolio-item-meta">
@@ -22,7 +23,7 @@ class Portfolio extends Component {
                      <p>{projects.category}</p>
                   </div>
                 </div>
-            </a>
+            </span>
           </div>
         </div>
       })

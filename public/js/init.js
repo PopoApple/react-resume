@@ -43,7 +43,6 @@
 	sections.waypoint({
 
       handler: function(event, direction) {
-
 		   var active_section;
 
 			active_section = $(this);
@@ -55,7 +54,8 @@
 			active_link.parent().addClass("current");
 
 		},
-		offset: '35%'
+      offset: '35%',
+      context: document.body
 
 	});
 
@@ -77,10 +77,10 @@
 /*	Fade In/Out Primary Navigation
 ------------------------------------------------------*/
 
-   $(window).on('scroll', function() {
+   $(document.body).on('scroll', function() {
 
 		var h = $('header').height();
-		var y = $(window).scrollTop();
+		var y = $(document.body).scrollTop();
       var nav = $('#nav-wrap');
 
 	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {

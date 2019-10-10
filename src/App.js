@@ -9,6 +9,7 @@ import Contact from './Components/Contact';
 import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
 import Modal from './Components/Modal';
+import resumeData from './resumeData';
 
 class App extends Component {
 
@@ -25,18 +26,19 @@ class App extends Component {
   }
 
   getResumeData(){
-    $.ajax({
-      url: (process.env.PUBLIC_URL ? process.env.PUBLIC_URL : '') + '/resumeData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
+    this.setState({resumeData});
+    // $.ajax({
+    //   url: (process.env.PUBLIC_URL ? process.env.PUBLIC_URL : '') + '/resumeData.json',
+    //   dataType:'json',
+    //   cache: false,
+    //   success: function(data){
+    //     this.setState({resumeData: data});
+    //   }.bind(this),
+    //   error: function(xhr, status, err){
+    //     console.log(err);
+    //     alert(err);
+    //   }
+    // });
   }
 
   componentDidMount(){

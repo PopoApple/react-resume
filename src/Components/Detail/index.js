@@ -20,7 +20,7 @@ class Detail extends React.Component {
                             {d.title && <div className="detail-item-title">{d.title}</div>}
                             {d.img && 
                               <div className="detail-item-img">
-                                <img src={'images/' + d.img} />
+                                <img src={d.img} />
                               </div>
                             }
                             <p className="detail-item-desc">{d.desc}</p>
