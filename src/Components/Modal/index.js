@@ -24,7 +24,7 @@ class Modal extends React.Component {
     // 则需添加 state 到 Modal 中，
     // 仅当 Modal 被插入 DOM 树中才能渲染子元素。
     modalRoot.appendChild(this.el);
-    document.body.style.overflow = 'hidden'
+    //document.body.style.overflow = 'hidden'
     setTimeout(() => {
         this.setState({ status: 'in' })
     })   
@@ -32,7 +32,7 @@ class Modal extends React.Component {
 
   componentWillUnmount() {
     modalRoot.removeChild(this.el);
-    document.body.style.overflow = 'auto'
+    //document.body.style.overflow = 'auto'
   }
 
   render() {

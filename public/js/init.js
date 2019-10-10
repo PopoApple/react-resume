@@ -5,6 +5,16 @@
 -----------------------------------------------------------------------------------*/
 
  jQuery(document).ready(function($) {
+   //myScroll = new IScroll(body, { mouseWheel: true });
+   const myScroll = new IScroll('#wrapper', {
+      probeType: 2,
+		scrollbars: true,
+		mouseWheel: true,
+		interactiveScrollbars: true,
+		shrinkScrollbars: 'scale',
+      fadeScrollbars: true,
+      click: true
+	});
 
 /*----------------------------------------------------*/
 /* FitText Settings
@@ -14,22 +24,32 @@
 	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
 	 }, 100);
 
-
 /*----------------------------------------------------*/
 /* Smooth Scrolling
 ------------------------------------------------------ */
-
+let currentHash = null;
+   myScroll.on('scrollEnd', () => {
+      if (currentHash) {
+         window.location.hash = currentHash;
+         currentHash = null;
+      }
+      updateNavBar()
+   })
    $('.smoothscroll').on('click',function (e) {
 	    e.preventDefault();
 
 	    var target = this.hash,
 	    $target = $(target);
+       const endTop = $target[0].offsetTop
+       myScroll.scrollTo(0, -endTop, 800);
+       currentHash = target;
 
 	   //  $('html, body').stop().animate({
 	   //      'scrollTop': $target.offset().top
 	   //  }, 800, 'swing', function () {
 	   //      window.location.hash = target;
       //  });
+      /*
       var start = null;
       const startTop = $('body').scrollTop()
       const endTop = $target[0].offsetTop
@@ -49,7 +69,7 @@
          $('#log').html($('#log').html() + '<br />' + document.body.scrollTop)
       }
 
-      window.requestAnimationFrame(step);
+      window.requestAnimationFrame(step);*/
 
 	});
 
@@ -97,16 +117,17 @@
 /*----------------------------------------------------*/
 /*	Fade In/Out Primary Navigation
 ------------------------------------------------------*/
-
-   $(document.body).on('scroll', function() {
-
-		var h = $('header').height();
-		var y = $(document.body).scrollTop();
+function updateNavBar() {
+   console.log(123)
+      var h = $('header').height();
+      var y = -myScroll.y;
       var nav = $('#nav-wrap');
+      
+      nav[0].style.top = y + 'px';
 
-	   if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
-	      nav.fadeOut('fast');
-	   }
+      if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
+         nav.fadeOut('fast');
+      }
       else {
          if (y < h*.20) {
             nav.removeClass('opaque').fadeIn('fast');
@@ -116,7 +137,8 @@
          }
       }
 
-	});
+   }
+   myScroll.on('scroll', updateNavBar);
 
 
 /*----------------------------------------------------*/
