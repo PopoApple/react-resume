@@ -3,7 +3,7 @@
     margin: -5px 0 0 -3px;
 }
 .tags-item {
-    float: left;
+    display: inline-block;
     padding: 0 10px;
     border: 1px solid #dae0e4;
     border-radius: 15px;
