@@ -8,13 +8,14 @@
    //myScroll = new IScroll(body, { mouseWheel: true });
    const myScroll = new IScroll('#wrapper', {
       probeType: 2,
-		scrollbars: true,
-		mouseWheel: true,
-		interactiveScrollbars: true,
-		shrinkScrollbars: 'scale',
+      scrollbars: true,
+      mouseWheel: true,
+      interactiveScrollbars: true,
+      shrinkScrollbars: 'scale',
       fadeScrollbars: true,
       click: true
-	});
+   });
+    
 
 /*----------------------------------------------------*/
 /* FitText Settings
@@ -123,7 +124,7 @@ function updateNavBar() {
       var y = -myScroll.y;
       var nav = $('#nav-wrap');
       
-      nav[0].style.top = y + 'px';
+      //nav[0].style.top = y + 'px';
 
       if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
          nav.fadeOut('fast');

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import './App.css';
 import Header from './Components/Header';
+import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
@@ -52,13 +53,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume} showModal={this.showModal} />
-        <Portfolio data={this.state.resumeData.portfolio} showModal={this.showModal} />
-        <Testimonials data={this.state.resumeData.testimonials}/>
-        <Contact data={this.state.resumeData.main}/>
-        <Footer data={this.state.resumeData.main}/>
+        <Nav data={this.state.resumeData.main}/>
+        <div id="wrapper">
+          <div>
+            <Header data={this.state.resumeData.main}/>
+            <About data={this.state.resumeData.main}/>
+            <Resume data={this.state.resumeData.resume} showModal={this.showModal} />
+            <Portfolio data={this.state.resumeData.portfolio} showModal={this.showModal} />
+            <Testimonials data={this.state.resumeData.testimonials}/>
+            <Contact data={this.state.resumeData.main}/>
+            <Footer data={this.state.resumeData.main}/>
+          </div>
+        </div>
+        
         {this.state.modalShow &&
           <Modal onClose={() => this.setState({ modalShow: false })} maxWidth={this.state.modalContentMaxWidth} >
             {this.state.modalContent}
