@@ -16,7 +16,7 @@ class Portfolio extends Component {
         return <div key={projects.title} className="columns portfolio-item">
            <div className="item-wrap">
             <span onClick={() => this.showDetail(projects)} title={projects.title}>
-               <img alt={projects.title} src={projectImage} />
+               <img className="slowlyLoadImg" alt={projects.title} src={projectImage} />
                <div className="overlay">
                   <div className="portfolio-item-meta">
                  <h5>{projects.title}</h5>

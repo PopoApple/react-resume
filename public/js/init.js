@@ -7,7 +7,7 @@
  jQuery(document).ready(function($) {
    //myScroll = new IScroll(body, { mouseWheel: true });
    const myScroll = new IScroll('#wrapper', {
-      probeType: 2,
+      probeType: 3,
       scrollbars: true,
       mouseWheel: true,
       interactiveScrollbars: true,
@@ -15,7 +15,57 @@
       fadeScrollbars: true,
       click: true
    });
-    
+
+   $('.slowlyLoadImg').on('load', function() {
+      myScroll.refresh()
+   })
+   
+   myScroll.on('scrollEnd', () => {
+      if (currentHash) {
+         window.location.hash = currentHash;
+         currentHash = null;
+      }
+      updateNavBar()
+   })
+   myScroll.on('scroll', function() {
+      var sections = $("section");
+      var navigation_links = $("#nav-wrap a");
+
+      var active_section;
+      if (myScroll.directionY > 0) {
+         for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i]
+            if (myScroll.y <= myScroll.maxScrollY) {
+               active_section = $(sections[sections.length - 1])
+               break
+            } else {
+               const top = section.offsetTop + myScroll.y
+               if (top <= window.innerHeight * .35) {
+                  active_section = $(section)
+                  break
+               }
+            }
+         }
+      } else {
+         for (let i = 0; i < sections.length; i++) {
+            const section = sections[i]
+            const top = section.offsetTop + myScroll.y
+            if (top >= window.innerHeight * .35) {
+               active_section = $(section).prev()
+               break
+            }
+         }
+      }
+
+      if (active_section) {
+         var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
+   
+         navigation_links.parent().removeClass("current");
+         active_link.parent().addClass("current");
+      }
+      
+      updateNavBar();
+   });
 
 /*----------------------------------------------------*/
 /* FitText Settings
@@ -28,14 +78,8 @@
 /*----------------------------------------------------*/
 /* Smooth Scrolling
 ------------------------------------------------------ */
-let currentHash = null;
-   myScroll.on('scrollEnd', () => {
-      if (currentHash) {
-         window.location.hash = currentHash;
-         currentHash = null;
-      }
-      updateNavBar()
-   })
+   let currentHash = null;
+   
    $('.smoothscroll').on('click',function (e) {
 	    e.preventDefault();
 
@@ -79,6 +123,7 @@ let currentHash = null;
 /* Highlight the current section in the navigation bar
 ------------------------------------------------------*/
 
+/*
 	var sections = $("section");
 	var navigation_links = $("#nav-wrap a");
 
@@ -99,7 +144,7 @@ let currentHash = null;
       offset: '35%',
       context: document.body
 
-	});
+	});*/
 
 
 /*----------------------------------------------------*/
@@ -119,12 +164,9 @@ let currentHash = null;
 /*	Fade In/Out Primary Navigation
 ------------------------------------------------------*/
 function updateNavBar() {
-   console.log(123)
       var h = $('header').height();
       var y = -myScroll.y;
       var nav = $('#nav-wrap');
-      
-      //nav[0].style.top = y + 'px';
 
       if ( (y > h*.20) && (y < h) && ($(window).outerWidth() > 768 ) ) {
          nav.fadeOut('fast');
@@ -139,7 +181,6 @@ function updateNavBar() {
       }
 
    }
-   myScroll.on('scroll', updateNavBar);
 
 
 /*----------------------------------------------------*/
