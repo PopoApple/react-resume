@@ -90,7 +90,7 @@ class Resume extends Component {
             <h1><span>专业技能</span></h1>
          </div>
 
-         <div className="nine columns main-col">
+         <div className="nine columns main-col" style={{ textAlign: 'center' }}>
 
             <p>{skillmessage}
             </p>
