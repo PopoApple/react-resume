@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
+import IScroll from "iscroll";
+import $ from 'jquery';
 
 const appRoot = document.getElementById('root');
 const modalRoot = document.getElementById('modal-root');
@@ -12,6 +14,8 @@ class Modal extends React.Component {
     this.state = {
         status: 'before',
     }
+    this.wrapRef = React.createRef();
+    this.iscroll = null
   }
 
   componentDidMount() {
@@ -27,10 +31,24 @@ class Modal extends React.Component {
     //document.body.style.overflow = 'hidden'
     setTimeout(() => {
         this.setState({ status: 'in' })
-    })   
+    }) 
+    this.iscroll = new IScroll(this.wrapRef.current, {
+      scrollbars: true,
+      mouseWheel: true,
+      interactiveScrollbars: true,
+      shrinkScrollbars: 'scale',
+      fadeScrollbars: true,
+      click: true,
+      bounceTime: 150
+    });  
+    $('.slowlyLoadImg').on('load', () => {
+      this.iscroll.refresh()
+    })
   }
 
   componentWillUnmount() {
+    this.iscroll.destroy()
+    this.iscroll = null
     modalRoot.removeChild(this.el);
     //document.body.style.overflow = 'auto'
   }
@@ -38,17 +56,19 @@ class Modal extends React.Component {
   render() {
     const { onClose, maxWidth } = this.props
     return ReactDOM.createPortal(
-      <div className={ 'modal-wrap modal-wrap-' + this.state.status }>
-          <div className="modal-close-btn" onClick={onClose}>
-            <span class="icon iconfont">&#xe635;</span>
-          </div>
-          <div className="modal-content" style={maxWidth ? { maxWidth } : null}>
-            {this.props.children}
-          </div>
-          <div className="modal-footer">
-            <a onClick={onClose} className="button">
-              <span class="icon iconfont">&#xe608;</span>关闭
-            </a>
+      <div className={ 'modal-wrap modal-wrap-' + this.state.status } ref={this.wrapRef}>
+          <div className="modal-wrap-inner">
+            <div className="modal-close-btn" onClick={onClose}>
+              <span class="icon iconfont">&#xe635;</span>
+            </div>
+            <div className="modal-content" style={maxWidth ? { maxWidth } : null}>
+              {this.props.children}
+            </div>
+            <div className="modal-footer">
+              <a className="button" onClick={onClose}>
+                <span class="icon iconfont">&#xe608;</span>关闭
+              </a>
+            </div>
           </div>
       </div>,
       this.el,

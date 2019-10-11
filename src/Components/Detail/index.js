@@ -24,7 +24,7 @@ class Detail extends React.Component {
                             }
                             {d.img && 
                               <div className="detail-item-img">
-                                <img src={d.img} />
+                                <img className="slowlyLoadImg" src={d.img} />
                               </div>
                             }
                             {d.duty ?

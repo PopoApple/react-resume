@@ -62,7 +62,7 @@
    #resume h1 { font: 16px/24px 'opensans-bold', sans-serif; }
    #resume .main-col { padding-right: 5%; }   
 
-   .modal-wrap {
+   .modal-wrap-inner {
       padding: 70px 30px 50px 30px !important;
    }
    .modal-close-btn {
