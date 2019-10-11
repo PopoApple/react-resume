@@ -203,7 +203,8 @@
    } */
 
    ul#nav li {
-      display: block;
+      /* display: block; */
+      display: none;
       height: auto;      
       margin: 0 auto; 
       padding: 0 4%;           

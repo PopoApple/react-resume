@@ -21,10 +21,10 @@
    })
    
    myScroll.on('scrollEnd', () => {
-      if (currentHash) {
-         window.location.hash = currentHash;
-         currentHash = null;
-      }
+      // if (currentHash) {
+      //    window.location.hash = currentHash;
+      //    currentHash = null;
+      // }
       updateNavBar()
    })
    myScroll.on('scroll', function() {
@@ -289,11 +289,14 @@ function updateNavBar() {
    });
 
    function toggleMenu (status) {
+      if (status === 'show') {
+         $('nav li').css({ display: 'block' })
+      }
       $('#nav').animate(
          status === 'hide' ? { opacity: 0 } : { opacity: 1 },
          250,
          function () {
-            $('#nav')[0].style.display = status === 'hide' ? 'none' : 'block'
+            $('#nav, #nav li').css({ display: status === 'hide' ? 'none' : 'block' })
          },
       )
    }
