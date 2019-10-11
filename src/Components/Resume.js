@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Detail from './Detail';
+import Tags from './Tags';
 
 class Resume extends Component {
 
@@ -25,6 +26,7 @@ class Resume extends Component {
       var work = this.props.data.work.map((work) => {
         return <div key={work.company}><h3>{work.company}</h3>
             <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
+            {work.tags && <p className="info"><Tags data={work.tags} /></p>}
             <p className="info">{work.description}</p>
             <p className="info info-last text-right">
               <a onClick={() => this.showDetail(work)}>项目经历>></a>

@@ -22,13 +22,14 @@
 .detail-item-title {
     font-size: 24px;
     color: #313131;
+    margin-bottom: 20px;
 }
 .detail-item-img {
     width: 100%;
     margin: 20px 0;
 }
 .detail-item-desc {
-    margin: 20px 0 30px;
+    margin: 20px 0;
     font: 16px/24px 'serif', serif;
     color: #6E7881;
 }

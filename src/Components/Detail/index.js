@@ -1,5 +1,6 @@
 import React from 'react';
-import './index.css'
+import './index.css';
+import Tags from '../Tags';
 
 class Detail extends React.Component {
   constructor(props) {
@@ -18,12 +19,22 @@ class Detail extends React.Component {
                     return (
                         <div key={i} className="detail-item">
                             {d.title && <div className="detail-item-title">{d.title}</div>}
+                            {d.tags && 
+                              <p className="detail-item-desc"><Tags data={d.tags} /></p>
+                            }
                             {d.img && 
                               <div className="detail-item-img">
                                 <img src={d.img} />
                               </div>
                             }
-                            <p className="detail-item-desc">{d.desc}</p>
+                            {d.duty ?
+                              <div>
+                                <p className="detail-item-desc">项目介绍：{d.desc}</p>
+                                <p className="detail-item-desc">工作职责：{d.duty}</p>
+                              </div>
+                              :
+                              <p className="detail-item-desc">{d.desc}</p>
+                            }
                         </div>
                     )
                 })}
