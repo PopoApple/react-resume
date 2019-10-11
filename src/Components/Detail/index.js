@@ -20,7 +20,7 @@ class Detail extends React.Component {
                         <div key={i} className="detail-item">
                             {d.title && <div className="detail-item-title">{d.title}</div>}
                             {d.tags && 
-                              <p className="detail-item-desc"><Tags data={d.tags} /></p>
+                              <div className="detail-item-desc"><Tags data={d.tags} /></div>
                             }
                             {d.img && 
                               <div className="detail-item-img">
