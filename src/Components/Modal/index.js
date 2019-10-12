@@ -4,7 +4,6 @@ import './index.css'
 import IScroll from "iscroll";
 import $ from 'jquery';
 
-const appRoot = document.getElementById('root');
 const modalRoot = document.getElementById('modal-root');
 
 class Modal extends React.Component {

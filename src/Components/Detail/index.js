@@ -3,10 +3,6 @@ import './index.css';
 import Tags from '../Tags';
 
 class Detail extends React.Component {
-  constructor(props) {
-    super(props);
-  
-  }
 
   render() {
     const { title, subTitle, list } = this.props
@@ -24,7 +20,7 @@ class Detail extends React.Component {
                             }
                             {d.img && 
                               <div className="detail-item-img">
-                                <img className="slowlyLoadImg" src={d.img} />
+                                <img className="slowlyLoadImg" src={d.img} alt="" />
                               </div>
                             }
                             {d.duty ?

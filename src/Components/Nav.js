@@ -3,20 +3,10 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
 
-    if(this.props.data){
-      var name = this.props.data.name;
-      var occupation= this.props.data.occupation;
-      var description= this.props.data.description;
-      var city= this.props.data.address.city;
-      var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a target="_blank" href={network.url}><i className={network.className}></i></a></li>
-      })
-    }
-
     return (
       <nav id="nav-wrap">
 
-        <a id="mobileBtn" className="mobile-btn"></a>
+        <a id="mobileBtn" className="mobile-btn">Toggle navigation</a>
 
         <ul id="nav" className="nav">
           <li className="current"><a className="smoothscroll" href="#home">首页</a></li>

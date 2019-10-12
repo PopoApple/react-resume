@@ -2,10 +2,6 @@ import React from 'react';
 import './index.css';
 
 class Tags extends React.Component {
-  constructor(props) {
-    super(props);
-  
-  }
 
   render() {
     const { data } = this.props
