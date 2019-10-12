@@ -290,13 +290,15 @@ function updateNavBar() {
 
    function toggleMenu (status) {
       if (status === 'show') {
-         $('nav li').css({ display: 'block' })
+         $('#nav, #nav li').css({ display: 'block' })
       }
       $('#nav').animate(
          status === 'hide' ? { opacity: 0 } : { opacity: 1 },
          250,
          function () {
-            $('#nav, #nav li').css({ display: status === 'hide' ? 'none' : 'block' })
+            if (status === 'hide') {
+               $('#nav, #nav li').css({ display: 'none' })
+            }
          },
       )
    }

@@ -74,12 +74,12 @@ export default {
         "projects": [
           { "title": "SaaS OA", "date": "2018.06 - 2019.01", 
             "tags": ["后台管理系统", "React", "Ant Design", "DvaJS", "Webpack"],
-            "desc": "该项目是一款定位于教培行业的SaaS版办公管理信息系统，提供人事、审批、考勤、消息等功能。项目框架是沿用了公司的一套比较完善的后台管理系统框架，使用的技术框架是React，UI组件库是Ant Design，数据流方案是DvaJS，构建工具是Webpack。" ,
+            "desc": "该项目是一款定位于教培行业的SaaS版办公管理系统，分为PC端和移动端应用，包含流程审批、日程安排、工作消息、人事管理等功能。使用的技术框架是React，UI组件库是Ant Design的PC版和Mobile版，数据流方案是DvaJS，构建工具是Webpack。" ,
             "duty": "负责项目框架搭建、开发规范制定、业务功能开发。" 
           },
           { "title": "BOSS校长信息系统", "date": "2016.10 - 2019.08", 
             "tags": ["后台管理系统", "重构", "规范化", "JQuery", "React", "Ant Design", "DvaJS", "Webpack"],
-            "desc": "该项目是为某大型教育培训类企业定制开发的一套管理信息系统，提供教务管理、学生管理、账务管理、统计报表等功能。该项目原本基于传统的前后端不分离的架构开发，比较混乱、效率低、难以维护，因此进行了重构，将前端项目独立出来实现前后端分离，并且在后续的业务开发过程中不断积累和完善，形成了比较稳定的一套开发规范和组件库，整个项目进入了良性的运行。使用的技术重构前是JQuery，重构后是React、Ant Design、DvaJS、Webpack。" ,
+            "desc": "该项目是为某大型教育培训类企业定制开发的一套管理信息系统，包含教务管理、学生管理、账务管理、统计报表等功能。该项目原本基于传统的前后端不分离的架构开发，比较混乱、效率低、难以维护，因此进行了重构，将前端项目独立出来实现前后端分离，并且在后续的业务开发过程中不断积累和完善，形成了比较稳定的一套开发规范和组件库，整个项目进入了良性的运行。使用的技术重构前是JQuery，重构后是React、Ant Design、DvaJS、Webpack。" ,
             "duty": "负责旧系统部分功能维护、重构方案的设计和实现；新系统项目框架搭建、开发规范制定、业务功能开发。" 
           }
         ]
@@ -88,63 +88,63 @@ export default {
         "company":"广州优亿信息科技有限公司",
         "title":"前端工程师",
         "years":"2011.04 - 2016.10",
-        "tags": ["移动端", "PC端Web应用", "桌面应用程序", "HTML5", "JQuery", "MUI", "JqueryMobile", "Bootstrap"],
-        "description":"工作内容主要是移动互联网相关产品的开发，独立负责前端技术调研、交互设计、功能开发。使用的技术主要有HTML5、JQuery、MUI、JqueryMobile、Bootstrap。",
+        "tags": ["移动端", "Hybrid", "PC端Web应用", "桌面应用程序", "HTML5", "JQuery", "MUI", "JQueryMobile", "Bootstrap"],
+        "description":"工作内容主要是移动互联网相关产品的开发，独立负责前端技术调研、交互设计、功能开发。使用的技术主要有HTML5、JQuery、MUI、JQueryMobile、Bootstrap。",
         "projects": [
           { "title": "微服务云平台", "date": "2014.10 - 2016.10", "tag": "PC端Web应用", 
-            "tags": ["PC端Web应用", "HTML5", "JQuery"],
-            "desc": "该项目是一个一站式建站服务平台，提供自助建站、站点托管、运营管理等服务。使用的技术主要是HTML5、JQuery、MUI。",
-            "duty": "负责前端技术调研、交互设计、功能开发。"
+            "tags": ["PC端Web应用", "手机微站", "HTML5", "JQuery", "MUI"],
+            "desc": "该项目是一个一站式建站服务平台，实现快速搭建手机微站的功能，包含可视化设计、内容管理、站点托管、运营管理等功能。其中可视化设计是其核心功能，以拖拽组件加配置的方式，从单个页面布局到多个页面间跳转，从静态内容编辑到动态数据源设置，完整地实现手机微站的设计。使用的技术主要是HTML5、JQuery、MUI。",
+            "duty": "负责前期产品调研，前端交互设计和功能开发。"
           },
           { "title": "WebApp IDE", "date": "2014.03 - 2014.10", "tag": "桌面应用程序", 
-            "tags": ["桌面应用程序", "JavaScript", "MUI"],
-            "desc": "该项目是一款快速开发移动端APP的集成开发工具，包含代码编辑器、工程模板、组件化的代码块、真机调试、应用打包等功能。前端技术实现是基于开源的代码编辑器Brackets来做功能扩展。",
-            "duty": "负责前端技术调研和开发，使用的技术主要是JavaScript、MUI。"
+            "tags": ["桌面应用程序", "Hybrid", "MUI", "PhoneGap"],
+            "desc": "该项目是一套集成开发工具，用于快速开发Hybrid形式的移动端APP，包含代码编辑器、工程模板、组件代码块、真机调试、应用打包等功能。其技术实现是基于开源的代码编辑器Brackets来做插件扩展，使用的技术主要有JavaScript、MUI、PhoneGap等。",
+            "duty": "负责工程模板、组件代码块、代码提示、文档提示功能的设计和开发。"
           },
           { "title": "易应用", "date": "2013.06 - 2013.12", "tag": "PC端Web应用", 
             "tags": ["PC端Web应用", "JQueryMobile"],
-            "desc": "该项目是一款快速将传统PC端网页转换成移动端网页的智能工具，核心功能是自动抓取PC端网页内容和智能套用移动端的UI组件。",
+            "desc": "该项目是一款PC端网页转移动端网页的工具，其核心技术是自动抓取PC端网页内容，然后智能套用移动端的UI组件。",
             "duty": "负责移动端UI组件的开发，使用的技术主要是JQueryMobile。"
           },
           { "title": "小屏快看", "date": "2012.05 - 2013.10", "tag": "移动端App", 
-            "tags": ["移动端App", "混合编程"],
-            "desc": "该项目是一款休闲娱乐类的视频应用，包含手机桌面小视频、APP视频应用。",
-            "duty": "负责APP视频应用的前端开发，使用的是手机原生和Web混合编程技术。"
+            "tags": ["移动端APP", "Hybrid", "HTML5", "JQuery"],
+            "desc": "该项目是一款视频应用，包含APP、手机桌面widget。采用的是Hybrid形式，其中APP中页面布局和内容展示是Web页面，APP中的播放器、手机桌面widget是手机原生技术。",
+            "duty": "负责APP中Web页面的开发。"
           },
           { "title": "辐射探测器", "date": "2011.12 - 2012.05", "tag": "移动端App", 
-            "tags": ["移动端App", "HTML5", "Canvas"],
-            "desc": "该项目是一款随身的辐射探测应用，包含一个迷你的硬件设备和配套的手机APP，提供仪表盘、统计报表等功能。",
-            "duty": "负责前端界面设计和功能开发，使用的技术主要是HTML5的Canvas。"
+            "tags": ["移动端APP", "HTML5", "Canvas"],
+            "desc": "该项目是一款随身的辐射探测应用，包含一个迷你的硬件设备和配套的手机APP，可使用探测器实时检测周围环境的辐射值，通过手机APP以各种形式展示出来。使用的技术主要是HTML5的Canvas。",
+            "duty": "负责APP前端界面设计和功能开发。"
           },
           { "title": "IMS核心网业务评估软件", "date": "2011.04 - 2011.11", "tag": "桌面应用程序", 
             "tags": ["桌面应用程序", "Winform"],
-            "desc": "该项目是为中国电信广东研究院定制的网络性能评估软件，包含可视化的网络设备拓扑结构模拟、业务参数设置和性能评估报告等功能。",
-            "duty": "负责需求调研和主要功能开发，使用的技术是Winform。"
+            "desc": "该项目是为中国电信广东研究院定制的网络性能评估软件，包含可视化模拟网络拓扑结构、业务参数设置、性能评估报告等功能。使用的技术是Winform。",
+            "duty": "独立负责需求调研和功能开发。"
           }
         ]
       },
       {
         "company":"广东原创动力文化传播有限公司",
         "title":"动画师",
-        "years":"2008.06 - 2010.06",
-        "tags": ["动画设计", "Flash", "Photoshop"],
-        "description":"工作内容是影视动画的制作，使用的工具主要是Flash、Photoshop。",
+        "years":"2008.06 - 2011.02",
+        "tags": ["动画设计", "Flash"],
+        "description":"工作内容是影视动画制作，负责分镜头设计、动作设计、场景设计等。使用的工具主要是Flash。",
         "detailMaxWidth": 580,
         "projects": [
           { "title": "喜羊羊与灰太狼", "img": sheepImg, 
             "tags": ["动画设计", "管理"],
             "desc": "一部热播的少儿影视动画片。",
-            "duty": "担任动画组长，负责分镜头设计、组员工作分配、成片剪辑工作。" 
+            "duty": "担任动画组长，负责分镜头设计、关键动作和场景设计、组员工作分配、成片剪辑工作。" 
           },
           { "title": "蹴鞠小英雄", "img": footballImg, 
-            "tags": ["动画设计", "道具设计"],
+            "tags": ["动画设计"],
             "desc": "一部古装风格的少儿影视动画片。",
-            "duty": "负责人物动作、道具的设计和制作。" 
+            "duty": "负责人物动作设计、场景设计。" 
           },
           { "title": "七色战记", "img": color7Img, 
             "tags": ["动画设计"],
-            "desc": "一部奇幻风格少儿影视动画片",
-            "duty": "负责人物动作的设计和制作。" 
+            "desc": "一部奇幻风格少儿影视动画片。",
+            "duty": "负责人物动作设计、场景设计。" 
           }
         ]
       },
@@ -152,28 +152,23 @@ export default {
         "company":"广州华南资讯科技有限公司",
         "title":"Java工程师",
         "years":"2006.03 - 2008.02",
-        "tags": ["J2EE", "Java", "JSP", "Oracle", "Weblogic"],
-        "description":"工作内容是社保行业的信息系统开发，使用的技术框架是J2EE，数据库是Oracle，应用服务器是Weblogic。",
+        "tags": ["后台管理系统", "J2EE", "Java", "Oracle"],
+        "description":"工作内容是社保行业的信息系统开发，负责需求调研、业务功能开发、内部应用开发框架完善。使用的技术或工具主要是Java、Oracle。",
         "projects": [
-          { "title": "应用开发框架", 
-            "tags": ["Eclipse插件开发"],
-            "desc": "该项目是公司自主研发的内部统一应用开发框架，用于提升工作效率，提供UI组件库、表单引擎、查询引擎、校验引擎、代码生成等功能。使用的技术是Eclipse插件开发。",
-            "duty": "负责可视化插入代码功能的开发" 
-          },
           { "title": "佛山社保业务软件", 
-            "tags": ["需求调研", "JSP"],
-            "desc": "该项目是为佛山市人力资源和社会保障局的社保业务定制的信息系统，包含了信息登记、申报、审批等功能。使用的技术主要是JSP。",
-            "duty": "负责业务需求调研、功能开发" 
+            "tags": ["后台管理系统", "J2EE", "Oracle", "WebLogic"],
+            "desc": "该项目是为佛山市人力资源和社会保障局的社保业务定制的信息系统，包含信息登记、申报、审批等功能。使用的技术框架是J2EE、数据库是Oracle，应用服务器是WebLogic。",
+            "duty": "负责业务需求调研、功能开发。" 
           },
           { "title": "广州劳动保障业务软件", 
-            "tags": ["JSP", "数据库存储过程"],
-            "desc": "该项目是为广州市劳动与社会保障局的劳动保障业务定制的信息系统，包含了信息登记、申报、审批、统计报表等功能。使用的技术主要是JSP、数据库存储过程。",
+            "tags": ["后台管理系统", "J2EE", "Oracle", "WebLogic", "存储过程"],
+            "desc": "该项目是为广州市劳动与社会保障局的劳动保障业务定制的信息系统，包含信息登记、申报、审批、统计报表等功能。使用的技术框架是J2EE、数据库是Oracle，应用服务器是WebLogic。",
             "duty": "负责业务功能开发、数据库存储过程开发。" 
           }
         ]
       }
     ],
-    "skillmessage":"HTML、CSS、JavaScript、React、JQuery、Webpack、Git、Vue、Java",
+    "skillmessage":"HTML、CSS、JavaScript、React、JQuery、Webpack、Git、MUI、Bootstrap、Vue、Java",
     "skills":[
       {
         "name":"HTML",
@@ -189,19 +184,27 @@ export default {
       },
       {
         "name":"React",
-        "level":"80%"
+        "level":"75%"
       },
       {
         "name":"JQuery",
-        "level":"70%"
+        "level":"75%"
       },
       {
         "name":"Webpack",
-        "level":"55%"
+        "level":"65%"
       },
       {
         "name":"Git",
-        "level":"45%"
+        "level":"50%"
+      },
+      {
+        "name":"MUI",
+        "level":"50%"
+      },
+      {
+        "name":"Bootstrap",
+        "level":"50%"
       },
       {
         "name":"Vue",
@@ -217,20 +220,20 @@ export default {
     "projects": [
       {
         "title":"UI组件库",
-        "category":"一套后台管理信息系统UI组件库",
+        "category":"一套后台管理系统的UI组件库",
         "image":portfolio3Img,
         "url":"http://www.timbakerdev.com/originalthaifood.github.io",
         "items": [
-          { "img": componentsImg, "desc": "这是工作中整理的一套后台管理信息系统UI组件库，提供日常开发项目常用的展示、输入、弹框等类型的组件，包含组件用法举例和API说明，有效地实现了代码的可重用性和可维护性，从而大大提高了团队的工作效率。"  }
+          { "img": componentsImg, "desc": "这是工作中整理的一套UI组件库，包含后台管理系统项目开发中常用的展示、输入、弹框等类型的组件，并配有常见的用法举例、规范的API说明，有效地实现了代码的可重用性和可维护性，从而大大提高了团队的工作效率。"  }
         ]
       },
       {
-        "title":"APP设计器",
-        "category":"一款拖拽式的手机APP设计器",
+        "title":"微站设计器",
+        "category":"一款所见即所得的手机微站设计器",
         "image":portfolio1Img,
         "url":"https://www.canadianwanderlust.com",
         "items": [
-          { "img": designerImg, "desc": "这是一款拖拽式的手机APP设计器，包含页面管理、页面设计、内容编辑、预览等功能。"  }
+          { "img": designerImg, "desc": "这是一款功能强大的设计器，以可视化的方式设计出高质量的手机微站，同时也生成了可用的代码。其中页面管理功能实现多个页面的管理和页面间的跳转；界面布局设计采用拖拽组件的方式，组件设计灵活，可通过嵌套组合和参数设置，设计出大多数常见的页面形式；内容配置既可静态编辑又可以设置动态的数据源，保证内容管理的高效。"  }
         ]
       },
       // {

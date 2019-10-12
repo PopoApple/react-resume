@@ -58,14 +58,14 @@ class Modal extends React.Component {
       <div className={ 'modal-wrap modal-wrap-' + this.state.status } ref={this.wrapRef}>
           <div className="modal-wrap-inner">
             <div className="modal-close-btn" onClick={onClose}>
-              <span class="icon iconfont">&#xe635;</span>
+              <span className="icon iconfont">&#xe635;</span>
             </div>
             <div className="modal-content" style={maxWidth ? { maxWidth } : null}>
               {this.props.children}
             </div>
             <div className="modal-footer">
               <a className="button" onClick={onClose}>
-                <span class="icon iconfont">&#xe608;</span>关闭
+                <span className="icon iconfont">&#xe608;</span>关闭
               </a>
             </div>
           </div>
