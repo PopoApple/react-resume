@@ -40,7 +40,7 @@ class Contact extends Component {
          <div className="row" style={{ textAlign: 'center', marginTop: 20, marginBottom: 50}}>
             <div className="twelve columns">
                {/* <div className="contact-text" style={{ color: '#fff', fontSize: 16, marginBottom: 10, letterSpacing: 2 }}>微信</div> */}
-               <img className="code2-img" src={weixinImg} alt="" />
+               <img className="code2-img allowCopy" src={weixinImg} alt="" />
             </div>
          </div>
       </section>

@@ -30,7 +30,7 @@ export default {
       "zip": "(Your Zip/Postal Code)"
     },
     "website": "http://www.timbakerdev.com",
-    "resumedownload":"resume.pdf",
+    "resumedownload":"resume.201910141249.pdf",
     "social":[
       {
         "name":"github",
