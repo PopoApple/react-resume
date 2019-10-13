@@ -26,9 +26,9 @@ class About extends Component {
                <div className="columns contact-details">
                   <h2>联系方式</h2>
                   <p className="address allowCopy">
-						   <span>手机：{phone}</span><br />
-						   <span>QQ：{qq}</span><br />
-                     <span>邮箱：{email}</span>
+						   <span className="allowCopy">手机：{phone}</span><br />
+						   <span className="allowCopy">QQ：{qq}</span><br />
+                     <span className="allowCopy">邮箱：{email}</span>
 					   </p>
                </div>
                {this.props.isPC &&

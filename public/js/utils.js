@@ -21,15 +21,3 @@ function getIscrollCfg () {
    }
    return iscrollCfg
 }
-
-// IScroll.utils.preventDefaultException = function (el, exceptions) {
-//     if( el.outerHTML == "<span>lohuasen-com</span>" ) {
-//         return true;
-//     }
-//     for ( var i in exceptions ) {
-//         if ( exceptions[i].test(el[i])) {
-//             return true;
-//         }
-//     }
-//     return false;
-// };
