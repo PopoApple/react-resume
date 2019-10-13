@@ -38,7 +38,8 @@ class Modal extends React.Component {
       shrinkScrollbars: 'scale',
       fadeScrollbars: true,
       click: true,
-      bounceTime: 150
+      bounceTime: 150,
+      //preventDefault: false,
     });  
     $('.slowlyLoadImg').on('load', () => {
       this.iscroll.refresh()

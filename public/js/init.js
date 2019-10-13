@@ -13,7 +13,8 @@
       interactiveScrollbars: true,
       shrinkScrollbars: 'scale',
       fadeScrollbars: true,
-      click: true
+      click: true,
+      //preventDefault: false,
    });
 
    $('.slowlyLoadImg').on('load', function() {
