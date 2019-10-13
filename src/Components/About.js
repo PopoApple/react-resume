@@ -31,11 +31,13 @@ class About extends Component {
                      <span>邮箱：{email}</span>
 					   </p>
                </div>
-               <div className="columns download">
-                  <p>
-                     <a download href={resumeDownload} className="button"><i className="fa fa-download"></i>下载简历</a>
-                  </p>
-               </div>
+               {this.props.isPC &&
+                  <div className="columns download">
+                     <p>
+                        <a download href={resumeDownload} className="button"><i className="fa fa-download"></i>下载简历</a>
+                     </p>
+                  </div>
+               }
             </div>
          </div>
       </div>

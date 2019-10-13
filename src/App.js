@@ -21,6 +21,7 @@ class App extends Component {
       modalShow: false,
       modalContent: null,
       modalContentMaxWidth: null,
+      isPC: null,
     };
 
   }
@@ -43,6 +44,9 @@ class App extends Component {
 
   componentDidMount(){
     this.getResumeData();
+    if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+      this.setState({ isPC: true })
+    }
   }
 
   showModal =  (modalContent, modalContentMaxWidth) => {
@@ -56,7 +60,7 @@ class App extends Component {
         <div id="wrapper">
           <div>
             <Header data={this.state.resumeData.main}/>
-            <About data={this.state.resumeData.main}/>
+            <About data={this.state.resumeData.main} isPC={this.state.isPC} />
             <Resume data={this.state.resumeData.resume} showModal={this.showModal} />
             <Portfolio data={this.state.resumeData.portfolio} showModal={this.showModal} />
             <Testimonials data={this.state.resumeData.testimonials}/>
