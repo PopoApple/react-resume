@@ -830,3 +830,54 @@ body {
 }
 
 
+/* Styled scrollbars */
+
+.iScrollHorizontalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	height: 16px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	overflow: hidden;
+}
+
+.iScrollHorizontalScrollbar.iScrollBothScrollbars {
+	right: 18px;
+}
+
+.iScrollVerticalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	width: 12px;
+	bottom: 2px;
+	top: 2px;
+	right: 2px;
+	overflow: hidden;
+}
+
+.iScrollVerticalScrollbar.iScrollBothScrollbars {
+	bottom: 18px;
+}
+
+.iScrollIndicator {
+	position: absolute;
+	background: rgba(0,0,0,.5);
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(255,255,255,.2) rgba(255,255,255,.25) rgba(255,255,255,.3) rgba(255,255,255,.25);
+	border-radius: 8px;
+}
+
+.iScrollHorizontalScrollbar .iScrollIndicator {
+	height: 100%;
+	background: rgba(0,0,0,.5);
+}
+
+.iScrollVerticalScrollbar .iScrollIndicator {
+	width: 100%;
+	background: rgba(0,0,0,.5);
+}
+
+
+/* end */

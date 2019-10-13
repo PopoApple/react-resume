@@ -5,19 +5,13 @@
 -----------------------------------------------------------------------------------*/
 
  jQuery(document).ready(function($) {
-   const iscrollCfg = {}
-   if (isPC) {
-      iscrollCfg.preventDefault = false
-   }
    const myScroll = new IScroll('#wrapper', {
       probeType: 3,
-      scrollbars: true,
       mouseWheel: true,
       interactiveScrollbars: true,
       shrinkScrollbars: 'scale',
-      fadeScrollbars: true,
       click: true,
-      ...iscrollCfg,
+      ...getIscrollCfg(),
    });
 
    $('.slowlyLoadImg').on('load', function() {

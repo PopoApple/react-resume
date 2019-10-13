@@ -19,7 +19,7 @@ class Header extends Component {
 
       <div className="row banner">
          <div className="banner-text">
-            <h1 className="responsive-headline">您好！我是{name}</h1>
+            <h1 className="responsive-headline allowCopy">您好！我是{name}</h1>
             <h3>我是一名 <span>{occupation}</span>。{description}。</h3>
             <hr />
             <ul className="social">

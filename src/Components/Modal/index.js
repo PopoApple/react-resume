@@ -31,19 +31,13 @@ class Modal extends React.Component {
     setTimeout(() => {
         this.setState({ status: 'in' })
     }) 
-    const iscrollCfg = {}
-    if (window.isPC()) {
-       iscrollCfg.preventDefault = false
-    }
     this.iscroll = new IScroll(this.wrapRef.current, {
-      scrollbars: true,
       mouseWheel: true,
       interactiveScrollbars: true,
       shrinkScrollbars: 'scale',
-      fadeScrollbars: true,
       click: true,
       bounceTime: 150,
-      ...iscrollCfg,
+      ...window.getIscrollCfg(),
     });  
     $('.slowlyLoadImg').on('load', () => {
       this.iscroll.refresh()

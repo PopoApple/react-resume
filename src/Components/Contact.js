@@ -26,15 +26,15 @@ class Contact extends Component {
          <div className="row">
             <div className="four columns icon-text">
                <div className="contact-icon"><span className="icon iconfont">&#xe61c;</span></div>
-               <div className="contact-text">{phone}</div>
+               <div className="contact-text allowCopy">{phone}</div>
             </div>
             <div className="four columns icon-text">
                <div className="contact-icon"><span className="icon iconfont">&#xe615;</span></div>
-               <div className="contact-text">{qq}</div>
+               <div className="contact-text allowCopy">{qq}</div>
             </div>
             <div className="four columns icon-text">
                <div className="contact-icon"><span className="icon iconfont" style={{ fontSize: 45 }}>&#xe69d;</span></div>
-               <div className="contact-text">{email}</div>
+               <div className="contact-text allowCopy">{email}</div>
             </div>
          </div>
          <div className="row" style={{ textAlign: 'center', marginTop: 20, marginBottom: 50}}>

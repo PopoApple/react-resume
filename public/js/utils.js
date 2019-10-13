@@ -4,3 +4,20 @@ function isPC () {
     }
     return false
 }
+
+function getIscrollCfg () {
+   var iscrollCfg = {}
+   if (isPC()) {
+      iscrollCfg = {
+         preventDefault: false,
+         scrollbars: 'custom',
+      }
+   } else {
+      iscrollCfg = {
+         fadeScrollbars: true,
+         scrollbars: true,
+         preventDefaultException: { className: /(^|\s)allowCopy(\s|$)/ },
+      }
+   }
+   return iscrollCfg
+}

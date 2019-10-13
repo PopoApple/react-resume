@@ -25,7 +25,7 @@ class About extends Component {
             <div className="row">
                <div className="columns contact-details">
                   <h2>联系方式</h2>
-                  <p className="address">
+                  <p className="address allowCopy">
 						   <span>手机：{phone}</span><br />
 						   <span>QQ：{qq}</span><br />
                      <span>邮箱：{email}</span>

@@ -133,16 +133,20 @@ header .scrolldown a {
 /* nav-wrap */
 #nav-wrap {
    font: 12px 'opensans-bold', sans-serif;
-   width: 100%;
    text-transform: uppercase;
    letter-spacing: 2.5px;
    margin: 0 auto;
    z-index: 100;
    position: fixed;
-   left: 0;
+   left: 14px;
+   right: 14px;
    top: 0;
 }
 .opaque { background-color: #333; }
+#nav-wrap.opaque {
+   left: 0;
+   right: 0;
+}
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn { display: none; }
