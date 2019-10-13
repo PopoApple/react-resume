@@ -5,7 +5,10 @@
 -----------------------------------------------------------------------------------*/
 
  jQuery(document).ready(function($) {
-   //myScroll = new IScroll(body, { mouseWheel: true });
+   const iscrollCfg = {}
+   if (isPC) {
+      iscrollCfg.preventDefault = false
+   }
    const myScroll = new IScroll('#wrapper', {
       probeType: 3,
       scrollbars: true,
@@ -14,7 +17,7 @@
       shrinkScrollbars: 'scale',
       fadeScrollbars: true,
       click: true,
-      //preventDefault: false,
+      ...iscrollCfg,
    });
 
    $('.slowlyLoadImg').on('load', function() {

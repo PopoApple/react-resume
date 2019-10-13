@@ -44,7 +44,7 @@ class App extends Component {
 
   componentDidMount(){
     this.getResumeData();
-    if (!/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+    if (window.isPC()) {
       this.setState({ isPC: true })
     }
   }
