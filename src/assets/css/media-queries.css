@@ -120,7 +120,11 @@
       width: auto;
       position: fixed;
       top: 0;
-      right: 0;
+      right: 14px;
+   }
+   #nav-wrap.opaque {
+      left: 14px;
+      right: 14px;
    }
    #nav-wrap > a {
 	   width: 48px;
@@ -137,7 +141,7 @@
 
       position: relative;
       top: 0px;
-      right: 30px;
+      right: 16px;
    }
 
 	#nav-wrap > a:before,

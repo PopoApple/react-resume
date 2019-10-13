@@ -34,7 +34,7 @@ class About extends Component {
                {this.props.isPC &&
                   <div className="columns download">
                      <p>
-                        <a download href={resumeDownload} className="button"><i className="fa fa-download"></i>下载简历</a>
+                        <a download="华永妍个人简历" href={resumeDownload} className="button"><i className="fa fa-download"></i>下载简历</a>
                      </p>
                   </div>
                }
